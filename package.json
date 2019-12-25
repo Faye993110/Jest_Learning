@@ -1,0 +1,19 @@
+{
+  "name": "jest_learning",
+  "version": "1.0.0",
+  "description": "Learning Jest",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Faye993110/Jest_Learning.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Faye993110/Jest_Learning/issues"
+  },
+  "homepage": "https://github.com/Faye993110/Jest_Learning#readme"
+}
