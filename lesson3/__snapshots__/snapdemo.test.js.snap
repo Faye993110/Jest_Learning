@@ -5,12 +5,6 @@ Object {
   "domain": "localhost",
   "port": 8080,
   "server": "http://localhost",
-}
-`;
-
-exports[`测试 generateConfig 函数 1`] = `
-Object {
-  "port": 8080,
-  "server": "http://localhost",
+  "time": Any<Date>,
 }
 `;
