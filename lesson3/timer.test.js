@@ -1,5 +1,8 @@
 import timer from './timer'
-jest.useFakeTimers();
+beforeEach(() => {
+    jest.useFakeTimers();
+})
+
 
 // test('timer 测试', (done) => {
 //     timer( () => {
@@ -13,7 +16,7 @@ test('timer 测试', () => {
     timer(fn);
     //jest.runAllTimers();
     //jest.runOnlyPendingTimers();//当前处于队列中的timer
-    jest.advanceTimersByTime(3000);
+    jest.advanceTimersByTime(3000); //让时间快进3秒
     expect(fn).toHaveBeenCalledTimes(1);
     jest.advanceTimersByTime(3000);
     expect(fn).toHaveBeenCalledTimes(2);
