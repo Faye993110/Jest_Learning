@@ -1,6 +1,6 @@
 import React from 'react';
 //import ReactDOM from 'react-dom';
-import Enzyme, {shallow}from 'enzyme';
+import Enzyme, {shallow, mount}from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import App from './App';
 
@@ -12,8 +12,15 @@ it('renders without crashing', () => {
 //  // ReactDOM.unmountComponentAtNode(div);
 //  const container = div.getElementsByClassName('App');
 //  expect(container.length).toBe(1);
-const wrapper = shallow(<App/>);
-expect(wrapper.find('[data-test="container"]').length).toBe(1);
-expect(wrapper.find('[data-test="container"]').prop('title')).toBe('Faye');
-expect(wrapper.find('[data-test="container"]')).toExist();
+
+
+// const wrapper = shallow(<App/>);
+// const container = wrapper.find('[data-test="container"]');
+// expect(container.length).toBe(1);
+// expect(container.prop('title')).toBe('Faye');
+// expect(container).toExist();
+// expect(container).toHaveProp('title', 'Faye');
+
+const wrapper = mount(<App/>);
+expect(wrapper).toMatchSnapshot();
 });
