@@ -1,6 +1,6 @@
 import React, { Component} from 'react';
 import Header from './components/Header';
-import { threadId } from 'worker_threads';
+import './style.css';
 
 class TodoList extends Component {
     constructor(props){
