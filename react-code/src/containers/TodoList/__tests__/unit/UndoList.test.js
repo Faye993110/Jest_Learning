@@ -41,6 +41,18 @@ it('未完成列表 当数据为有内容时，点击某个删除按钮， 会�
     expect(fn).toHaveBeenLastCalledWith(index);
 })
 
+it('当某一项被点击时，出发执行 changeStatus 函数', () => {
+    const listData = ['learn Jest', 'Learn TDD', '学习单元测试'];
+    const fn = jest.fn();
+    const index = 1;
+    const wrapper = shallow(<UndoList changeStatus = {fn} list = {listData}/>);
+    const changeElems = findTestWrapper(wrapper,  "list-item");
+    console.log(deleteElems.at(1))
+
+    deleteElems.at(index).simulate('click')
+    expect(fn).toHaveBeenLastCalledWith(index);
+})
+
 
 
 

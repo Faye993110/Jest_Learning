@@ -18,7 +18,7 @@ class UndoList extends Component {
                         return (
                         <li 
                         data-test = 'list-item' 
-                        key = {`${item}-${index}`}
+                        key = {`${index}`}
                         className = 'undo-list-item'>
                         {item}
                         <div 
